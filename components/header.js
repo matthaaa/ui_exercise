@@ -1,4 +1,4 @@
-const app = new Vue({
+const header = new Vue({
   el: '#header',
   data: {
     title: 'Survey Squirrel'
