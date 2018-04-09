@@ -46,3 +46,14 @@ body {
     text-align: center;
   }
 }
+
+#survey {
+  .label {
+    color: #808080;
+    font-family: $main-font;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.57px;
+    line-height: 62px;
+  }
+}

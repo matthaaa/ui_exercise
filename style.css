@@ -90,3 +90,12 @@ body {
   line-height: 62px;
   text-align: center;
 }
+
+#survey .label {
+  color: #808080;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.57px;
+  line-height: 62px;
+}
