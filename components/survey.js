@@ -1,7 +1,15 @@
 new Vue({
   el: '#survey',
   data: {
-    questions: [],
-    number: 1,
+    formQuestion: "",
+    questions: {},
+  },
+  methods: {
+    saveQuestion: function () {
+      const questionNumber = Object.keys(this.questions).length + 1;
+      this.questions[questionNumber] = this.formQuestion;
+      formQuestion = "";
+      console.log(this.questions);
+    }
   }
 })

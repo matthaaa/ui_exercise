@@ -1,15 +1,48 @@
-@import 'partials/reset';
+@import 'partials/_reset';
 
 $main-font: 'Roboto', sans-serif;
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 #header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #007480;
   border: 1px solid #979797;
   width: 1440px;
   height: 99px;
+
+  h1 {
+    font-family: $main-font;
+    color: white;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: -1.06px;
+  }
 }
 
-h1 {
-  font-family: $main-font;
+#info-bar {
+  margin-top: 140px;
+  width: 1007px;
+  border: 1px solid #979797;
+  background-color: #FFFFFF;
+
+  h2 {
+    color: #3F3F3F;
+    width: 923px;
+    padding: 42px 38px;
+    font-family: $main-font;
+    font-weight: 300;
+    font-size: 42px;
+    letter-spacing: -0.85px;
+    line-height: 62px;
+    text-align: center;
+  }
 }

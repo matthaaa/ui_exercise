@@ -17,21 +17,26 @@
       <h2>{{welcome}}</h2>
     </div>
 
-    <section class="form">
+    <section id="survey" class="form">
       <div class="field">
-        <p id="survey" class="label">Question {{questions.length + 1}}</p>
+        <p class="label">Question {{Object.keys(questions).length + 1}}</p>
         <div class="control">
           <input
-            v-model="form.name"
+            v-model="formQuestion"
             class="input"
             type="text"
             placeholder="Text input"
           >
+          <button v-on:click="saveQuestion">Save Question</button>
         </div>
       </div>
     </section>
 
   </body>
+  <style lang="scss" scoped>
+    @import 'style.css';
+  </style>
+
 
   <script src="./components/header.js"></script>
   <script src="./components/info_bar.js"></script>
