@@ -41,6 +41,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+#header {
+  background-color: #007480;
+  border: 1px solid #979797;
+  width: 1440px;
+  height: 99px; }
+
 h1 {
   font-family: "Roboto", sans-serif; }
 

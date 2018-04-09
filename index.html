@@ -14,10 +14,26 @@
     </div>
 
     <div id="info-bar">
-      
+      <h2>{{welcome}}</h2>
     </div>
+
+    <section class="form">
+      <div class="field">
+        <p id="survey" class="label">Question {{questions.length + 1}}</p>
+        <div class="control">
+          <input
+            v-model="form.name"
+            class="input"
+            type="text"
+            placeholder="Text input"
+          >
+        </div>
+      </div>
+    </section>
+
   </body>
 
   <script src="./components/header.js"></script>
   <script src="./components/info_bar.js"></script>
+  <script src="./components/survey.js"></script>
 </html>
