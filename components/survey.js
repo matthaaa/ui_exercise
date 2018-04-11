@@ -2,21 +2,36 @@ new Vue({
   el: '#survey',
   data: {
     newQuestion: true,
-    newAnswers: false,
+    newAnswer: false,
     review: false,
     complete: false,
-    formQuestion: "",
+
     questions: {},
+
+    formQuestion: {
+      question: "",
+      answers: [],
+    },
+
+    formAnswer: "",
   },
   methods: {
-    saveQuestion: function () {
+    queueQuestion: function () {
       const questionNumber = Object.keys(this.questions).length + 1;
+      this.newQuestion = false;
+      this.newAnswer = true;
+      console.log(this.questions);
+      console.log(this.formQuestion);
+    },
+
+    saveAnswer: function () {
+      this.formQuestion.answers.push(this.formAnswer);
+      console.log(this.formQuestion);
+    },
+
+    saveQuestion: function () {
       this.questions[questionNumber] = this.formQuestion;
       this.formQuestion = "";
-      this.newQuestion = false;
-      this.newAnswers = true;
-      console.log(this.questions);
-      console.log();
     }
   }
 })

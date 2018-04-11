@@ -18,17 +18,34 @@
     </div>
 
     <section id="survey" class="form">
-      <div v-if="newQuestion || newAnswers" class="field">
+      <div class="questions-list">
+
+      </div>
+      <div v-if="newQuestion || newAnswer" class="field">
         <p class="label">Question {{Object.keys(questions).length + 1}}</p>
         <div class="control">
           <input
-            v-model="formQuestion"
+            v-model="formQuestion.question"
             class="input"
             type="text"
             placeholder="Text input"
           >
-          <button v-on:click="saveQuestion">Save Question</button>
+          <button v-on:click="queueQuestion">Save Question</button>
         </div>
+      </div>
+      <div v-if="newAnswer" class="field">
+        <div class="control">
+          <input
+            v-model="formAnswer"
+            class="input"
+            type="text"
+            placeholder="Text input"
+          >
+          <button v-on:click="saveAnswer">Save Answer</button>
+        </div>
+      </div>
+      <div v-for="answer in formQuestion.answers">
+        {{answer}}
       </div>
     </section>
 
