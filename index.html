@@ -30,7 +30,11 @@
             type="text"
             placeholder="Text input"
           >
-          <button v-on:click="queueQuestion">Save Question</button>
+          <button
+            v-if="newQuestion"
+            v-on:click="queueQuestion">
+            Save Question
+          </button>
         </div>
       </div>
       <div v-if="newAnswer" class="field">
