@@ -26,12 +26,13 @@ new Vue({
 
     saveAnswer: function () {
       this.formQuestion.answers.push(this.formAnswer);
+      this.formAnswer = "";
       console.log(this.formQuestion);
     },
 
     saveQuestion: function () {
       this.questions[questionNumber] = this.formQuestion;
       this.formQuestion = "";
-    }
+    },
   }
 })
