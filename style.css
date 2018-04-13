@@ -99,3 +99,38 @@ body {
   letter-spacing: -0.57px;
   line-height: 62px;
 }
+#survey .input {
+  background-color: #FFFFFF;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  width: 758px;
+  height: 60px;
+}
+#survey .question-input {
+  color: #3F3F3F;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.57px;
+  line-height: 62px;
+  width: 528.76px;
+  text-align: left;
+}
+#survey .answer-input {
+  color: #808080;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: -0.57px;
+  line-height: 62px;
+  width: 246.24px;
+  text-align: left;
+  width: 353px;
+}
+#survey .answer-list-item {
+  background-color: #FFFFFF;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  width: 353px;
+  height: 60px;
+}

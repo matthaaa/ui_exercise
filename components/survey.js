@@ -16,8 +16,15 @@ new Vue({
     formAnswer: "",
   },
   methods: {
+    createQuestion: function() {
+      if (this.newAnswer = true) {
+        this.newAnswer = false;
+        this.saveQuestion();
+        console.log(this.questions);
+      }
+    },
+
     queueQuestion: function () {
-      const questionNumber = Object.keys(this.questions).length + 1;
       this.newQuestion = false;
       this.newAnswer = true;
       console.log(this.questions);
@@ -25,14 +32,20 @@ new Vue({
     },
 
     saveAnswer: function () {
-      this.formQuestion.answers.push(this.formAnswer);
+      this.formQuestion.answers.unshift(this.formAnswer);
       this.formAnswer = "";
       console.log(this.formQuestion);
     },
 
     saveQuestion: function () {
+      const questionNumber = Object.keys(this.questions).length + 1;
       this.questions[questionNumber] = this.formQuestion;
       this.formQuestion = "";
+      console.log(this.questions);
     },
+
+    saveSurvey: function () {
+
+    }
   }
 })

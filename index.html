@@ -26,9 +26,9 @@
         <div class="control">
           <input
             v-model="formQuestion.question"
-            class="input"
+            class="input question-input"
             type="text"
-            placeholder="Text input"
+            placeholder="Type question here"
           >
           <button
             v-if="newQuestion"
@@ -41,15 +41,29 @@
         <div class="control">
           <input
             v-model="formAnswer"
-            class="input"
+            class="input answer-input"
             type="text"
-            placeholder="Text input"
+            placeholder="Type answer here"
           >
-          <button v-on:click="saveAnswer">Save Answer</button>
+          <button v-on:click="saveAnswer">Add Another Answer</button>
         </div>
       </div>
-      <div v-for="answer in formQuestion.answers.reverse()">
+      <div
+        class="answer-list-item"
+        v-for="answer in formQuestion.answers">
         {{answer}}
+      </div>
+      <div class="survey-actions">
+        <button
+          v-if="newQuestion || newAnswer"
+          v-on:click="createQuestion">
+          Add Question
+        </button>
+        <button
+          v-if="newQuestion || newAnswer"
+          v-on:click="saveSurvey">
+          Done
+        </button>
       </div>
     </section>
 

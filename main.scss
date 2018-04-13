@@ -56,4 +56,43 @@ body {
     letter-spacing: -0.57px;
     line-height: 62px;
   }
+
+  .input {
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    width: 758px;
+    height: 60px;
+  }
+
+  .question-input {
+    color: #3F3F3F;
+    font-family: $main-font;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: -0.57px;
+    line-height: 62px;
+    width: 528.76px;
+    text-align: left;
+  }
+
+  .answer-input {
+    color: #808080;
+    font-family: $main-font;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: -0.57px;
+    line-height: 62px;
+    width: 246.24px;
+    text-align: left;
+    width: 353px;
+  }
+
+  .answer-list-item {
+    background-color: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    width: 353px;
+    height: 60px;
+  }
 }
